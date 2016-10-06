@@ -1,10 +1,10 @@
 import sqlite3
-conn = sqlite3.connect('Personas.db')
+conn = sqlite3.connect('personas.db')
 
-conn.execute("INSERT INTO Persona(nombre, apellido, edad) VALUES('Ericka', 'Segura' , 17)")
-conn.execute("INSERT INTO Persona(nombre, apellido, edad) VALUES('Lilian', 'Bonilla' , 52)")
-conn.execute("INSERT INTO Persona(nombre, apellido, edad) VALUES('Marlon', 'Bonilla' , 27)")
-conn.execute("INSERT INTO Persona(nombre, apellido, edad) VALUES('Erick', 'Segura' , 53)")
+conn.execute("INSERT INTO Persona(nombre, familia_id, apellido, edad) VALUES('Ericka', 1, 17, 'Segura')")
+conn.execute("INSERT INTO Persona(nombre, familia_id, apellido, edad) VALUES('Erick', 1, 53, 'Segura')")
+conn.execute("INSERT INTO Persona(nombre, familia_id, apellido, edad) VALUES('Lilian', 2, 51, 'Bonilla')")
+conn.execute("INSERT INTO Persona(nombre, familia_id, apellido, edad) VALUES('Marlon', 2, 27, 'Bonilla')")
 
 conn.commit()
 conn.close()
